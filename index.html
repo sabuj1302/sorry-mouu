@@ -2,51 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sorry Mouu 🥺</title>
+  <title>Forgive Subuu 🙏</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="showPopup()">
+<body>
+  <h1>Mouu, I messed up again 😢</h1>
+  <p>I know words aren’t enough, but I’m really sorry. I never want to be the reason you’re upset — you mean way too much to me.</p>
 
-<!-- 💬 Popup -->
-<div id="popup">
-  <div id="popup-content">
-    <p>Hey love, I was stupid to roast you when I should’ve been lifting you up. You’re the smartest, strongest, most beautiful girl I know. This silly website is my way of saying sorry—let’s laugh again? 🥺💛</p>
-    <button onclick="closePopup()">Okay 🥺</button>
+  <h2>🧩 Complete the Sentences:</h2>
+
+  <form id="puzzleForm">
+    <p>1) Subuu is a ga<span><input type="text" id="q1" size="1" maxlength="1"></span>ho.</p>
+    <p>2) Subuu s<span><input type="text" id="q2a" size="1" maxlength="1"></span>d<span><input type="text" id="q2b" size="1" maxlength="1"></span>rb<span><input type="text" id="q2c" size="1" maxlength="1"></span>i.</p>
+    <p>3) Subuu s<span><input type="text" id="q3a" size="1" maxlength="1"></span>tm<span><input type="text" id="q3b" size="1" maxlength="1"></span>r<span><input type="text" id="q3c" size="1" maxlength="1"></span>ni.</p>
+    <p>4) Subuudin ka l<span><input type="text" id="q4a" size="1" maxlength="1"></span>l<span><input type="text" id="q4b" size="1" maxlength="1"></span> kat gaya.</p>
+    <br>
+    <button type="button" onclick="checkAnswers()">Submit</button>
+  </form>
+
+  <div id="result" style="display:none">
+    <h2>🎉 Hurray! We’ve punished Subuu enough!</h2>
+    <p>Now let’s play Subuu’s favourite song 🎵</p>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/ReAy_whDac4?start=47" frameborder="0" allowfullscreen></iframe>
+    <p>Hope this brings a smile. Sorry again, Mouu ❤️</p>
   </div>
-</div>
 
-<!-- ➗ Math Section -->
-<div id="math" style="display:none">
-  <h2>Okay smarty pants 😏 Prove you're not a gadhi</h2>
-  <p>What is 6 + 3? <input id="q1" /></p>
-  <p>What is 12 - 4? <input id="q2" /></p>
-  <p>What is 5 × 2? <input id="q3" /></p>
-  <button onclick="checkMath()">Submit</button>
-</div>
-
-<!-- 🧡 After Math Text -->
-<div id="mathDone" style="display:none">
-  <h2>Okay, okay! Mouu ≠ gadhi 🤓</h2>
-  <p>You’re too smart to roast. Now let’s play something fun!</p>
-  <button onclick="goToGame()">Next</button>
-</div>
-
-<!-- 🎮 Game Section -->
-<div id="game" style="display:none">
-  <h2>Click the hearts ❤️ – Each is a tear I cried 😢</h2>
-  <p>Score: <span id="score">0</span></p>
-  <div id="gameArea"></div>
-  <button onclick="goToFinal()">Done clicking</button>
-</div>
-
-<!-- 🎶 Final Text + YouTube -->
-<div id="final" style="display:none">
-  <h2>You always turn my tears into tunes 🎵</h2>
-  <p>Play this and forgive your idiot boyfriend?</p>
-  <iframe width="300" height="200" src="https://www.youtube.com/embed/ReAy_whDac4?start=47" frameborder="0" allowfullscreen></iframe>
-  <p>I’m really sorry, Mouu. You mean the world to me. 💛</p>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
