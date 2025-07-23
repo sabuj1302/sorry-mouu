@@ -1,54 +1,21 @@
-function showPopup() {
-  document.getElementById("popup").style.display = "flex";
-}
+function checkAnswers() {
+  let q1 = document.getElementById("q1").value.toLowerCase();
+  let q2a = document.getElementById("q2a").value.toLowerCase();
+  let q2b = document.getElementById("q2b").value.toLowerCase();
+  let q2c = document.getElementById("q2c").value.toLowerCase();
+  let q3a = document.getElementById("q3a").value.toLowerCase();
+  let q3b = document.getElementById("q3b").value.toLowerCase();
+  let q3c = document.getElementById("q3c").value.toLowerCase();
+  let q4a = document.getElementById("q4a").value.toLowerCase();
+  let q4b = document.getElementById("q4b").value.toLowerCase();
 
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-  document.getElementById("math").style.display = "block";
-}
-
-function checkMath() {
-  let q1 = document.getElementById("q1").value;
-  let q2 = document.getElementById("q2").value;
-  let q3 = document.getElementById("q3").value;
-
-  if (q1 == "9" && q2 == "8" && q3 == "10") {
-    document.getElementById("math").style.display = "none";
-    document.getElementById("mathDone").style.display = "block";
+  if (q1 === "d" &&
+      q2a === "u" && q2b === "u" && q2c === "a" &&
+      q3a === "u" && q3b === "a" && q3c === "a" &&
+      q4a === "o" && q4b === "u") {
+    document.getElementById("puzzleForm").style.display = "none";
+    document.getElementById("result").style.display = "block";
   } else {
-    alert("Wrong answers 😤 Try again, smart girl!");
-  }
-}
-
-function goToGame() {
-  document.getElementById("mathDone").style.display = "none";
-  document.getElementById("game").style.display = "block";
-  startGame();
-}
-
-function goToFinal() {
-  document.getElementById("game").style.display = "none";
-  document.getElementById("final").style.display = "block";
-}
-
-let score = 0;
-
-function startGame() {
-  const gameArea = document.getElementById("gameArea");
-  score = 0;
-  document.getElementById("score").innerText = score;
-  gameArea.innerHTML = "";
-  for (let i = 0; i < 10; i++) {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤️";
-    heart.style.top = Math.random() * 250 + "px";
-    heart.style.left = Math.random() * 90 + "%";
-    heart.onclick = () => {
-      heart.remove();
-      score++;
-      document.getElementById("score").innerText = score;
-    };
-    gameArea.appendChild(heart);
+    alert("Try again Mouu 😈 Subuu hasn’t suffered enough!");
   }
 }
